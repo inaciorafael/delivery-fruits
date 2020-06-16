@@ -94,4 +94,5 @@ export const BuyText = styled.Text`
     color: #fff;
     font-size: 15px;
     margin-left: 16px;
+    font-weight: bold;
 `;
