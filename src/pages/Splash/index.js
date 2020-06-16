@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigation } from "@react-navigation/native";
+import { Platform } from 'react-native';
 
 import {
   Container,
@@ -25,7 +26,7 @@ const Splash = () => {
 
   return (
     <Container>
-      <Ellipse8 source={Ellipse8Back} style={{ width: 400, height: 1000 }} />
+      <Ellipse8 source={Ellipse8Back} style={{ width: Platform.OS == 'ios' ? 450 : 400, height: 1000 }} />
       <Ellipse10
         source={Ellipse10Back}
         resizeMode="contain"

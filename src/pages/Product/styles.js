@@ -45,16 +45,15 @@ export const Search = styled.TextInput`
     font-size: 17px;
 `;
 
-export const CategoriesContainer = styled.View`
-    margin-top: 22px;
-    flex: 1;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 42px;
+export const FilterContainer = styled.View`
+    margin-top: 20px;
 `;
 
-export const RowView = styled.View`
+export const RowContainer = styled.View`
     flex-direction: row;
-    margin-bottom: 20px;
-    justify-content: space-between;
+    margin-top: 20px;
+`;
+
+export const Divider = styled.View`
+    height: 32px;
 `;
