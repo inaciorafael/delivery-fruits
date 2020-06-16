@@ -12,7 +12,7 @@ import {
   Button,
 } from "./styles";
 
-const ProductItem = ({image, price, onLike, like}) => {
+const ProductItem = ({image, price, onLike, like, onBuy}) => {
   return (
     <Container>
       <ImageContainer>
@@ -35,7 +35,7 @@ const ProductItem = ({image, price, onLike, like}) => {
               : <EvilIcons name="heart" size={24} color="black" />
             }
           </Button>
-          <Button color='#0BCE83'>
+          <Button color='#0BCE83' onPress={onBuy}>
             <AntDesign name="shoppingcart" size={20} color="#fff" />
           </Button>
         </RowContainer>

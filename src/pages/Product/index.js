@@ -97,7 +97,7 @@ const Product = () => {
         </ScrollView>
         <Divider />
           <View>
-            <ProductItem image={alfaces} price={1.1}  />
+            <ProductItem image={alfaces} price={1.1} onBuy={() => navigation.navigate('Buy')} />
             <ProductItem image={couveflor} price={1.85} like={like} onLike={() => setLike(!like)} />
             <ProductItem image={repolho} price={1.45} />
             <ProductItem image={alfaces} price={1.9} />

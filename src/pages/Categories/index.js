@@ -16,7 +16,6 @@ import {
 } from "./styles";
 
 import CardCategory from "../../components/CardCategori";
-import SearchComponent from '../../components/Search';
 
 import vegetables from "../../assets/vegetables.png";
 import fruits from "../../assets/fruits.png";
@@ -25,7 +24,12 @@ import sweets from "../../assets/sweets.png";
 import pasta from "../../assets/pasta.png";
 import drinks from "../../assets/drinks.png";
 
-import ProductScreen from '../../pages/Product';
+import Shop from '../../pages/Shop';
+import User from '../../pages/User';
+
+import Grid from '../../svgComponents/Grid';
+import UserIcon from '../../svgComponents/UserIcon';
+import ShopCart from '../../svgComponents/ShopCart';
 
 const Tab = createBottomTabNavigator();
 
@@ -66,8 +70,45 @@ function Categories() {
 
 const StackTabs = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Categories" component={Categories} />
+    <Tab.Navigator screenOptions={({ route, navigation }) => ({
+      tabBarIcon: ({ color, size, focused }) => {
+        if (route.name === "Categories") {
+          return (
+            <Grid
+              onPress={() => navigation.navigate("Categories")}
+              focused={focused}
+            />
+          );
+        }
+
+        if (route.name === "Shop") {
+          return (
+            <ShopCart
+              onPress={() => navigation.navigate("Categories")}
+              focused={focused}
+            />
+          );
+        }
+
+        if (route.name === "User") {
+          return (
+            <UserIcon
+              onPress={() => navigation.navigate("Categories")}
+              focused={focused}
+            />
+          );
+        }
+      },
+    })} >
+      <Tab.Screen name="Categories" component={Categories} options={{
+        title: ''
+        }} />
+      <Tab.Screen name="Shop" component={Shop} options={{
+        title: ''
+        }}  />
+      <Tab.Screen name="User" component={User} options={{
+        title: ''
+        }}  />
     </Tab.Navigator>
   );
 };
