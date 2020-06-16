@@ -1,6 +1,6 @@
 # Delivery Fruits
 
-<img src="img/gif.gif" title="FVCproductions" alt="Gif"></a>
+<img src="img/gif.gif" title="FVCproductions" alt="Gif" width='200' ></img>
 
 ***Demonstração app***
 
