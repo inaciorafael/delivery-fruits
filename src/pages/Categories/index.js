@@ -2,7 +2,7 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useNavigation } from "@react-navigation/native";
 import { Ionicons, Octicons } from "@expo/vector-icons";
-import { ScrollView } from "react-native";
+import { ScrollView, StatusBar } from "react-native";
 
 import {
   Container,
@@ -38,6 +38,7 @@ function Categories() {
 
   return (
     <Container>
+      <StatusBar barStyle='dark-content' />
       <Header>
         <ButtonBack onPress={() => navigation.goBack()}>
           <Ionicons name="ios-arrow-back" size={24} color="#2D0C57" />
