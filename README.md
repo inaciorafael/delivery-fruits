@@ -12,7 +12,7 @@
 
 ***Layout***
 
-[![INSERT YOUR GRAPHIC HERE](img/screen1.png)]()
+[![INSERT YOUR GRAPHIC HERE](img/screen2.png)]()
 
 - Most people will glance at your `README`, *maybe* star it, and leave
 - Ergo, people should understand instantly what your project is about based on your repo
