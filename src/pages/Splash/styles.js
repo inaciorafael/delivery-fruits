@@ -51,6 +51,7 @@ export const ButtonOrder = styled.TouchableOpacity`
 export const TextButton = styled.Text`
     color: #fff;
     font-size: 15px;
+    font-weight: bold;
 `;
 
 export const ButtonDimiss = styled.TouchableOpacity`

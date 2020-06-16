@@ -24,12 +24,12 @@ import sweets from "../../assets/sweets.png";
 import pasta from "../../assets/pasta.png";
 import drinks from "../../assets/drinks.png";
 
-import Shop from '../../pages/Shop';
-import User from '../../pages/User';
+import Shop from "../../pages/Shop";
+import User from "../../pages/User";
 
-import Grid from '../../svgComponents/Grid';
-import UserIcon from '../../svgComponents/UserIcon';
-import ShopCart from '../../svgComponents/ShopCart';
+import Grid from "../../svgComponents/Grid";
+import UserIcon from "../../svgComponents/UserIcon";
+import ShopCart from "../../svgComponents/ShopCart";
 
 const Tab = createBottomTabNavigator();
 
@@ -45,13 +45,18 @@ function Categories() {
       </Header>
       <Title>Categories</Title>
       <ScrollView>
-      <SearchContainer>
-        <Octicons name="search" size={24} color="#2D0C57" />
-        <Search placeholder="Search" placeholderTextColor="#9586A8" />
-      </SearchContainer>
+        <SearchContainer>
+          <Octicons name="search" size={24} color="#2D0C57" />
+          <Search placeholder="Search" placeholderTextColor="#9586A8" />
+        </SearchContainer>
         <CategoriesContainer>
           <RowView>
-            <CardCategory name="Vegetables" value={42} image={vegetables} onPress={() => navigation.navigate('Product')} />
+            <CardCategory
+              name="Vegetables"
+              value={42}
+              image={vegetables}
+              onPress={() => navigation.navigate("Product")}
+            />
             <CardCategory name="Fruits" value={32} image={fruits} />
           </RowView>
           <RowView>
@@ -70,45 +75,62 @@ function Categories() {
 
 const StackTabs = () => {
   return (
-    <Tab.Navigator screenOptions={({ route, navigation }) => ({
-      tabBarIcon: ({ color, size, focused }) => {
-        if (route.name === "Categories") {
-          return (
-            <Grid
-              onPress={() => navigation.navigate("Categories")}
-              focused={focused}
-            />
-          );
-        }
+    <Tab.Navigator
+      screenOptions={({ route, navigation }) => ({
+        tabBarIcon: ({ color, size, focused }) => {
+          if (route.name === "Categories") {
+            return (
+              <Grid
+                style={{ marginTop: 20 }}
+                onPress={() => navigation.navigate("Categories")}
+                focused={focused}
+              />
+            );
+          }
 
-        if (route.name === "Shop") {
-          return (
-            <ShopCart
-              onPress={() => navigation.navigate("Categories")}
-              focused={focused}
-            />
-          );
-        }
+          if (route.name === "Shop") {
+            return (
+              <ShopCart
+                style={{ marginTop: 20 }}
+                onPress={() => navigation.navigate("Categories")}
+                focused={focused}
+              />
+            );
+          }
 
-        if (route.name === "User") {
-          return (
-            <UserIcon
-              onPress={() => navigation.navigate("Categories")}
-              focused={focused}
-            />
-          );
-        }
-      },
-    })} >
-      <Tab.Screen name="Categories" component={Categories} options={{
-        title: ''
-        }} />
-      <Tab.Screen name="Shop" component={Shop} options={{
-        title: ''
-        }}  />
-      <Tab.Screen name="User" component={User} options={{
-        title: ''
-        }}  />
+          if (route.name === "User") {
+            return (
+              <UserIcon
+                style={{ marginTop: 20 }}
+                onPress={() => navigation.navigate("Categories")}
+                focused={focused}
+              />
+            );
+          }
+        },
+      })}
+    >
+      <Tab.Screen
+        name="Categories"
+        component={Categories}
+        options={{
+          title: "",
+        }}
+      />
+      <Tab.Screen
+        name="Shop"
+        component={Shop}
+        options={{
+          title: "",
+        }}
+      />
+      <Tab.Screen
+        name="User"
+        component={User}
+        options={{
+          title: "",
+        }}
+      />
     </Tab.Navigator>
   );
 };
