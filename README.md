@@ -1,5 +1,5 @@
-<div align='center' >
  # Delivery Fruits
+<div align='center' >
 <img src="img/gif.gif" title="FVCproductions" alt="Gif" width='200' ></img>
 
 ***Demonstração app***
